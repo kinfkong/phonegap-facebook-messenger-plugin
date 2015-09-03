@@ -20,6 +20,5 @@ var facebookMessengerPlugin = {
 };
 
 module.exports = facebookMessengerPlugin;
-               alert("Exported: " + facebookMessengerPlugin);
 
 });
