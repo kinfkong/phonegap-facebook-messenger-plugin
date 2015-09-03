@@ -8,8 +8,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <FacebookSDK/FacebookSDK.h>
+#import <FBSDKMessengerShareKit/FBSDKMessengerShareKit.h>
 #import <Cordova/CDV.h>
 
-@interface FacebookConnectPlugin : CDVPlugin
+@interface FacebookMessengerPlugin : CDVPlugin
 @end
