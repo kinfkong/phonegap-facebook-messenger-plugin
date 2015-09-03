@@ -1,4 +1,4 @@
-cordova.define("com.phonegap.plugins.facebookmessenger.FacebookMessengerPlugin", function(require, exports, module) { "use strict";
+"use strict";
 
 /*
  * @author Ally Ogilvie
@@ -21,4 +21,3 @@ var facebookMessengerPlugin = {
 
 module.exports = facebookMessengerPlugin;
 
-});
