@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="com.phonegap.plugins.facebookmessenger"
+        version="0.0.1">
+
+    <name>Facebook Messenger</name>
+
+    <description>
+      The Facebook Messenger plugin for Apache Cordova allows you to use the same JavaScript code in your
+      Cordova application as you use in your web application.
+      Docs: https://github.com/Wizcorp/phonegap-facebook-plugin.
+    </description>
+
+    <license>Apache 2.0</license>
+
+    <engines>
+        <!-- Requires > 3.3.* because of the custom Framework tag for iOS [CB-5238] -->
+        <!-- Requires > 3.5.0 because of the custom Framework tag for Android [CB-6698] -->
+        <engine name="cordova" version=">=3.5.0" />
+    </engines>
+
+    <!-- JavaScript interface -->
+    <js-module src="facebookMessengerPlugin.js"
+               name="FacebookMessengerPlugin"
+               target="phonegap/plugin/facebookMessengerPlugin/facebookMessengerPlugin.js">
+        <clobbers target="facebookMessengerPlugin" />
+    </js-module>
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="FacebookMessengerPlugin">
+                <param name="ios-package" value="FacebookMessengerPlugin"/>
+                <param name="onload" value="true" />
+            </feature>
+            <plugin name="FacebookMessengerPlugin" value="FacebookMessengerPlugin"/>
+        </config-file>
+
+        <header-file src="platforms/ios/Plugins/com.phonegap.plugins.facebookmessenger/FacebookMessengerPlugin.h" />
+        <source-file src="platforms/ios/Plugins/com.phonegap.plugins.facebookmessenger/FacebookMessengerPlugin.m" />
+
+        <!-- Facebook Messenger framework -->
+        <framework src="platforms/ios/FBSDKMessengerShareKit.framework" custom="true" />
+
+
+    </platform>
+
+</plugin>
