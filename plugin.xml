@@ -37,6 +37,16 @@
             <plugin name="FacebookMessengerPlugin" value="FacebookMessengerPlugin"/>
         </config-file>
 
+        <config-file target="*-Info.plist" parent="LSApplicationQueriesSchemes">
+          <array>
+            <string>fb-messenger-api20140430</string>
+            <string>fb-messenger-platform-20150128</string>
+            <string>fb-messenger-platform-20150218</string>
+            <string>fb-messenger-platform-20150305</string>
+          </array>
+        </config-file>
+
+
         <header-file src="platforms/ios/Plugins/com.phonegap.plugins.facebookmessenger/FacebookMessengerPlugin.h" />
         <source-file src="platforms/ios/Plugins/com.phonegap.plugins.facebookmessenger/FacebookMessengerPlugin.m" />
 
